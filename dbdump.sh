@@ -29,7 +29,7 @@ if [ $? != 0  ]; then
   exit 1
 fi
 
-echo "dumping ${DB} to ${DUMP_NAME}"
+echo "dumping ${DB} to ${DUMP_PATH}"
 
 $(mysqldump -u$DB_USER -p$DB_PASS $DB | gzip > $DUMP_PATH)
 
